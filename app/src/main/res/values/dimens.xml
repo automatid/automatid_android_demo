@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<dimen name="space_s">4dp</dimen>
+	<dimen name="space_n">8dp</dimen>
+	<dimen name="space_m">12dp</dimen>
+	<dimen name="space_l">16dp</dimen>
+	<dimen name="space_xl">24dp</dimen>
+	<dimen name="space_2xl">32dp</dimen>
+	<dimen name="space_3xl">40dp</dimen>
+
+	<integer name="animation_duration">500</integer>
+
+	<dimen name="settings_btn_margin_img">16dp</dimen>
+	<dimen name="settings_btn_margin_lbl_outer">12dp</dimen>
+
+</resources>

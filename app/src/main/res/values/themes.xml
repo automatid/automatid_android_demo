@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="Theme.App.Starting" parent="Theme.SplashScreen">
+		<item name="windowSplashScreenBackground">#ffffffff</item>
+		<item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+		<item name="postSplashScreenTheme">@style/AppTheme</item>
+	</style>
+
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:navigationBarColor">@android:color/transparent</item>
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:windowBackground">@color/bg_color</item>
+		<item name="fontFamily">@font/montserrat</item>
+
+		<!-- ripple color -->
+		<item name="colorControlHighlight">@color/white</item>
+
+		<!-- default text color -->
+		<item name="android:textColorTertiary">@color/text_color_on_light</item>
+
+		<!-- toolbar icon tint -->
+		<item name="colorControlNormal">@color/white</item>
+
+		<!-- switch in checked state color -->
+		<item name="colorControlActivated">@color/switch_activated</item>
+
+		<item name="bottomSheetDialogTheme">@style/AppBottomSheetDialog</item>
+	</style>
+
+	<style name="AppDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+		<item name="android:windowTitleStyle">@style/AppDialogTitle</item>
+	</style>
+
+	<style name="AppDialogTitle" parent="TextAppearance.AppCompat.Large">
+		<item name="android:textSize">18sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="AppBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+		<!-- default text color -->
+		<item name="android:textColorTertiary">@color/text_color_on_light</item>
+
+		<!-- switch in checked state color -->
+		<item name="colorControlActivated">@color/switch_activated</item>
+	</style>
+
+</resources>

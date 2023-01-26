@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name" translatable="false">AutomatID</string>
+
+	<string name="welcome_title">Welcome to AutomatID™</string>
+	<string name="welcome_body1">Smart Technology for Smart Identifications</string>
+	<string name="welcome_body2">Read the NFC chip of ID Documents and payment cards to securely identify yourself without wasting your time.</string>
+	<string name="welcome_btn_start">Start!</string>
+	<string name="welcome_footer">🔓 Your privacy and the security of your data is our top priority. In line with our mission, the data read is always <b>encrypted</b> and <b>not stored anywhere.</b></string>
+	<string name="welcome_menu_tc">Terms and conditions</string>
+	<string name="welcome_menu_settings">Settings</string>
+	<string name="tc_title">AutomatID™ Privacy policy</string>
+	<string name="tc_btn_accept">Accept and Continue</string>
+	<string name="settings_title">AutomatID™ Settings</string>
+	<string name="settings_body1">Set AutomatID as you prefer, defining the Identification Methods to be enabled and how errors are to be managed.</string>
+	<string name="settings_btn_identification_methods">Identification methods</string>
+	<string name="settings_btn_error_management">Error management</string>
+	<string name="settings_selection_passport">Passport</string>
+	<string name="settings_selection_identity_card">ID Card</string>
+	<string name="settings_selection_payment_card_valid">Payment Card (Valid)</string>
+	<string name="settings_selection_payment_card_invalid">Payment Card (Invalid)</string>
+	<string name="settings_selection_no_id_options">⚠️ No valid options selected</string>
+	<string name="settings_selection_retry_on_errors">Retry on errors</string>
+	<string name="settings_selection_abort_on_errors">Abort on errors</string>
+	<string name="error_management_title">Error Management</string>
+	<string name="error_management_body1">Choose how you want errors handled during the identification process.</string>
+	<string name="error_management_switch">Retry on errors</string>
+	<string name="error_management_body2_retry">Whenever an error occurs (e.g.: problems while reading a document or during the liveness check) AutomatID™ will show an error message asking you to try again.</string>
+	<string name="error_management_body2_abort">Whenever an error occurs (e.g.: problems while reading a document or during the liveness check) the AutomatID™ flow will be closed.</string>
+	<string name="error_management_btn_done">Done</string>
+	<string name="id_methods_title">Identification Methods</string>
+	<string name="id_methods_body1">What identification methods do you want to try? (Turn on at least one).</string>
+	<string name="id_methods_passport">Electronic Passport</string>
+	<string name="id_methods_identity_card">Electronic ID Card (European Format)</string>
+	<string name="id_methods_payment_card">Payment Card</string>
+	<string name="id_methods_payment_card_simulate_ok">Simulates the reading of a valid card</string>
+	<string name="id_methods_payment_card_simulate_ko">Simulates the reading of a not valid card</string>
+	<string name="id_methods_btn_done">Done</string>
+	<string name="card_scan_help_title">Reading a Payment Card</string>
+	<string name="card_scan_help_body">The card scan feature attests that the user has a specific credit/debit contactless card in his hands.\n \nYou will need to provide an encrypted JWT containing the card data (i.e. PAN, expiration date) of the card that you expect the user possesses. The card will be securely read and verified via NFC. No charges will be done on the card account.\n \nFor demo purposes, you can test both scenarios (user presents the correct card, user doesn\'t present the correct card) without providing the encrypted card data.</string>
+	<string name="card_scan_help_button_ok">Got it</string>
+	<string name="feedback_title_success">Identity verification successfully completed</string>
+	<string name="feedback_title_error">Error</string>
+	<string name="feedback_body_success">Your identity has been successfully verified.\nWe generated a JWT token containing the result of this identification.</string>
+	<string name="feedback_share_jwt">Share JWT Token</string>
+	<string name="feedback_btn_close">Done</string>
+	<string name="id_methods_identity_card_short">Identity Cards</string>
+	<string name="id_methods_passport_short">Passports</string>
+	<string name="error_management_retry_short">Retry on errors</string>
+	<string name="error_management_abort_short">Don\'t retry on errors</string>
+
+</resources>

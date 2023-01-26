@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_tc"
+        android:icon="@drawable/sci_icon_header_info"
+        android:title="@string/welcome_menu_tc"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/sci_icon_header_settings"
+        android:title="@string/welcome_menu_settings"
+        app:showAsAction="always" />
+
+</menu>

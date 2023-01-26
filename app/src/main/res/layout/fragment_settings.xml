@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/sci_icon_header_back" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2xl"
+        android:layout_marginEnd="@dimen/space_2xl"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/automatid_demo_app_feedback_settings"
+        tools:background="#80ffffff" />
+
+    <View
+        android:id="@+id/tray"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_xl"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_l"
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_marginEnd="@dimen/space_l"
+        android:text="@string/settings_title"
+        android:textColor="@color/text_color_on_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tray"
+        app:layout_constraintStart_toStartOf="@id/tray"
+        app:layout_constraintTop_toTopOf="@id/tray" />
+
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_l"
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_marginEnd="@dimen/space_l"
+        android:text="@string/settings_body1"
+        android:textColor="@color/text_color_on_light"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/tray"
+        app:layout_constraintStart_toStartOf="@id/tray"
+        app:layout_constraintTop_toBottomOf="@id/label1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnIdMethods"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_l"
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_marginEnd="@dimen/space_l"
+        android:background="@drawable/button_tray"
+        app:layout_constraintEnd_toEndOf="@id/tray"
+        app:layout_constraintStart_toStartOf="@id/tray"
+        app:layout_constraintTop_toBottomOf="@id/label2">
+
+        <ImageView
+            android:id="@+id/iconIdMethods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/settings_btn_margin_img"
+            android:layout_marginTop="@dimen/settings_btn_margin_img"
+            android:layout_marginBottom="@dimen/settings_btn_margin_img"
+            android:src="@drawable/sci_btn_outline_documents"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/idMethodsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginTop="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginEnd="@dimen/settings_btn_margin_lbl_outer"
+            android:text="@string/settings_btn_identification_methods"
+            android:textColor="@color/text_color_on_light"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconIdMethods"
+            app:layout_constraintTop_toBottomOf="@id/idMethodsValue"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/idMethodsValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginEnd="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginBottom="@dimen/settings_btn_margin_lbl_outer"
+            android:textColor="@color/text_color_on_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconIdMethods"
+            app:layout_constraintTop_toBottomOf="@id/idMethodsTitle"
+            tools:text="Test\ntest" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnErrorMgmt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_l"
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_marginEnd="@dimen/space_l"
+        android:background="@drawable/button_tray"
+        app:layout_constraintEnd_toEndOf="@id/tray"
+        app:layout_constraintStart_toStartOf="@id/tray"
+        app:layout_constraintTop_toBottomOf="@id/btnIdMethods">
+
+        <ImageView
+            android:id="@+id/iconErrorMgmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/settings_btn_margin_img"
+            android:layout_marginTop="@dimen/settings_btn_margin_img"
+            android:layout_marginBottom="@dimen/settings_btn_margin_img"
+            android:src="@drawable/sci_btn_outline_error_management"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/errorMgmtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginTop="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginEnd="@dimen/settings_btn_margin_lbl_outer"
+            android:text="@string/settings_btn_error_management"
+            android:textColor="@color/text_color_on_light"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconErrorMgmt"
+            app:layout_constraintTop_toBottomOf="@id/errorMgmtValue"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/errorMgmtValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginEnd="@dimen/settings_btn_margin_lbl_outer"
+            android:layout_marginBottom="@dimen/settings_btn_margin_lbl_outer"
+            android:textColor="@color/text_color_on_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconErrorMgmt"
+            app:layout_constraintTop_toBottomOf="@id/errorMgmtTitle"
+            tools:text="Test" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

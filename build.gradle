@@ -1,0 +1,39 @@
+ext {
+	minSdkVersion = 21
+	compileSdkVersion = 32
+	targetSdkVersion = 31
+
+	automatidVersion = "1.0.0"
+
+}
+
+buildscript {
+	ext.kotlin_version = "1.6.21"
+	repositories {
+		google()
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:7.2.2'
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+		classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.2"
+	}
+}
+
+allprojects {
+	repositories {
+		google()
+		mavenCentral()
+		maven {
+			url = "https://automatid-artifacts.s3.amazonaws.com/maven/"
+		}
+	}
+}
+
+allprojects { proj ->
+	configurations.all {
+		resolutionStrategy {
+			cacheChangingModulesFor 0, 'seconds'
+		}
+	}
+}

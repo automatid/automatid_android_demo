@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+	compileSdkVersion rootProject.ext.compileSdkVersion
+
+	defaultConfig {
+		applicationId "com.opentech.automatid.demoapp"
+		minSdkVersion rootProject.ext.minSdkVersion
+		targetSdkVersion rootProject.ext.targetSdkVersion
+		multiDexEnabled true
+		versionCode 5
+		versionName "1.0"
+	}
+
+	signingConfigs {
+		sci {
+			storeFile rootProject.file("demoapp.ks")
+			storePassword "sci_demoapp"
+			keyAlias "sci_demoapp"
+			keyPassword "sci_demoapp"
+		}
+	}
+
+	flavorDimensions = ["environment"]
+
+	productFlavors {
+		pro {
+			dimension = "environment"
+		}
+	}
+
+	buildTypes {
+		debug {
+			signingConfig signingConfigs.sci
+			minifyEnabled false
+		}
+		release {
+			signingConfig signingConfigs.sci
+			minifyEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "proguard-rules.pro"
+		}
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+
+	buildFeatures {
+		viewBinding true
+	}
+
+	bundle {
+		language {
+			enableSplit = false
+		}
+		density {
+			enableSplit = false
+		}
+		abi {
+			enableSplit = true
+		}
+	}
+}
+
+
+dependencies {
+	implementation("androidx.core:core-splashscreen:1.0.0")
+	implementation("androidx.appcompat:appcompat:1.5.1")
+	implementation("com.google.android.material:material:1.7.0")
+
+	def navVersion = "2.5.3"
+	implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+	implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+
+	implementation("com.airbnb.android:lottie:5.2.0")
+
+	implementation("com.automatid:automatid:${rootProject.ext.automatidVersion}") { changing = true }
+}
+
