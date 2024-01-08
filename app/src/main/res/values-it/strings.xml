@@ -37,13 +37,21 @@
     <string name="card_scan_help_title">Leggere una carta di pagamento</string>
     <string name="card_scan_help_body">La lettura di una carta di pagamento consente di verificare che l\'utente abbia veramente in mano una specifica carta di credito/debito.\nL\'integratore dovrà fornire un JWT crittografato contenente i dati della carta (ovvero PAN e data di scadenza) che si aspetta che l\'utente possieda. La carta verrà letta e verificata in modo sicuro tramite NFC. Non verrà eseguito alcun addebito sul conto associato alla carta.\nCon questa demo, è possibile testare entrambi gli scenari (l\'utente legge una carta valida / l\'utente legge una carta non valida) senza che siano stati forniti i dati della carte crittografati.</string>
     <string name="card_scan_help_button_ok">Fine</string>
-    <string name="feedback_title_success">Verifica dell\'identità completata con successo</string>
+    <string name="feedback_title_success">Identificazione avvenuta con successo</string>
     <string name="feedback_title_error">Errore</string>
-    <string name="feedback_body_success">La tua identità è stata verificata con successo.\nAbbiamo generato un Token JWT contenente il risultato del processo di identificazione.</string>
-    <string name="feedback_share_jwt">Condividi il Token JWT</string>
-    <string name="feedback_btn_close">Fine</string>
+    <string name="feedback_body_success">La tua identità è stata verificata con successo. Trovi di seguito i risultati:</string>
+    <string name="feedback_share_jwt">Invia il JWT Token con i risultati</string>
+    <string name="feedback_btn_close">Fatto</string>
     <string name="id_methods_identity_card_short">Carte d\'identità</string>
     <string name="id_methods_passport_short">Passaporti</string>
     <string name="error_management_retry_short">Non riprovare su errore</string>
     <string name="error_management_abort_short">Riprovare su errore</string>
+    <string name="issuing_authority_authenticity">Autenticità dell\'ente emittente</string>
+    <string name="document_data_integrity">Integrità dei dati del documento</string>
+    <string name="liveness_check">Liveness check</string>
+    <string name="face_comparison_matching">Corrispondenza del volto</string>
+    <string name="card_authenticity">Autenticità della carta di pagamento</string>
+    <string name="card_verification">Integrità crittografica della carta</string>
+    <string name="card_not_expired">Carta in corso di validità</string>
+    <string name="card_data_match">Corrispondenza con i dati carta forniti</string>
 </resources>

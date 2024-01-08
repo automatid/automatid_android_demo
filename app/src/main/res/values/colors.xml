@@ -11,10 +11,13 @@
 	<color name="switch_activated">#ff1966a4</color>
 
 	<color name="separator">#ffcccccc</color>
+	<color name="separator_feedback">#20ffffff</color>
 
 	<color name="bg_color">#2E3A49</color>
 	<color name="app_color">#2E3A49</color>
 	<color name="text_color_on_light">#2E3A49</color>
 	<color name="text_color_on_dark">#ffffff</color>
+
+	<color name="tray_color">#20ffffff</color>
 
 </resources>

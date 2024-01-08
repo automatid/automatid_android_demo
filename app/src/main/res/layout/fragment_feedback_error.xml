@@ -17,8 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
-        tools:background="#80ffffff"
-        tools:lottie_rawRes="@raw/automatid_demo_app_feedback_settings" />
+        app:lottie_rawRes="@raw/automatid_demo_app_feedback_error"
+        tools:background="#80ffffff" />
 
     <TextView
         android:id="@+id/feedbackTitle"
@@ -28,13 +28,13 @@
         android:layout_marginTop="@dimen/space_2xl"
         android:layout_marginEnd="@dimen/space_2xl"
         android:gravity="center_horizontal"
+        android:text="@string/feedback_title_error"
         android:textColor="@color/text_color_on_dark"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        tools:text="@string/feedback_title_success" />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <TextView
         android:id="@+id/feedbackText"
@@ -49,27 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/feedbackTitle"
-        tools:text="@string/feedback_body_success" />
-
-    <TextView
-        android:id="@+id/btnShareJwt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/space_2xl"
-        android:layout_marginTop="@dimen/space_2xl"
-        android:layout_marginEnd="@dimen/space_2xl"
-        android:background="?selectableItemBackground"
-        android:gravity="center"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="@string/feedback_share_jwt"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/btnClose"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/feedbackText"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
+        tools:text="Error description" />
 
     <Button
         android:id="@+id/btnClose"
@@ -83,7 +63,6 @@
         android:text="@string/feedback_btn_close"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnShareJwt" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

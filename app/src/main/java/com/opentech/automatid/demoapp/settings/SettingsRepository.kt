@@ -14,7 +14,7 @@ class SettingsRepository {
             val s = preferences.getString("paymentCardSetting", null).orEmpty()
             PaymentCardSetting.valueOf(s)
         } catch (e: IllegalArgumentException) {
-            PaymentCardSetting.Off
+            PaymentCardSetting.ValidCard
         }
 
         return IdMethodSettings(passportEnabled, idDocumentEnabled, paymentCardSetting)

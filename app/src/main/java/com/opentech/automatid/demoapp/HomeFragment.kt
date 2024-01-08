@@ -8,7 +8,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.opentech.automatid.*
+import com.opentech.automatid.AutomatIdCardScanInput
+import com.opentech.automatid.AutomatIdDocumentType.IDENTITY_CARD
+import com.opentech.automatid.AutomatIdDocumentType.PASSPORT
+import com.opentech.automatid.AutomatIdDocumentType.PAYMENT_CARD
+import com.opentech.automatid.AutomatIdIdentificationRequest
+import com.opentech.automatid.AutomatIdIdentificationResult
+import com.opentech.automatid.AutomatIdLifecycleCallback
+import com.opentech.automatid.AutomatIdManager
+import com.opentech.automatid.ErrorHandlingDecision
 import com.opentech.automatid.demoapp.databinding.FragmentHomeBinding
 import com.opentech.automatid.demoapp.settings.PaymentCardSetting
 import com.opentech.automatid.demoapp.settings.SettingsViewModel
@@ -53,13 +61,13 @@ class HomeFragment : Fragment() {
 
         val documentTypes = buildSet {
             if (idMethodSettings.idDocumentEnabled) {
-                add(AutomatIdDocumentType.IDENTITY_CARD)
+                add(IDENTITY_CARD)
             }
             if (idMethodSettings.passportEnabled) {
-                add(AutomatIdDocumentType.PASSPORT)
+                add(PASSPORT)
             }
             if (idMethodSettings.paymentCardSetting != PaymentCardSetting.Off) {
-                add(AutomatIdDocumentType.PAYMENT_CARD)
+                add(PAYMENT_CARD)
             }
         }
 
@@ -82,7 +90,12 @@ class HomeFragment : Fragment() {
 
         AutomatIdManager.startIdentification(requireActivity(), identificationRequest, object : AutomatIdLifecycleCallback(this) {
             override fun onSuccess_(result: AutomatIdIdentificationResult.Success) {
-                findNavController().navigate(HomeFragmentDirections.homeToFeedback(result))
+                Log.i("AutomatID", "Success: $result")
+                if (result.usedDocument == PAYMENT_CARD) {
+                    findNavController().navigate(HomeFragmentDirections.homeToFeedbackCardscan(result))
+                } else {
+                    findNavController().navigate(HomeFragmentDirections.homeToFeedbackIdDoc(result))
+                }
             }
 
             override fun onCancel_() {
@@ -91,7 +104,7 @@ class HomeFragment : Fragment() {
 
             override fun onError_(error: AutomatIdIdentificationResult.Error) {
                 Log.e("AutomatID", "Error: $error")
-                findNavController().navigate(HomeFragmentDirections.homeToFeedback(error))
+                findNavController().navigate(HomeFragmentDirections.homeToFeedbackError(error))
             }
 
             override fun decideRecoverableErrorHandling(error: AutomatIdIdentificationResult.Error): ErrorHandlingDecision {

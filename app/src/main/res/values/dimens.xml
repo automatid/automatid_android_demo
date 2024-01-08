@@ -14,4 +14,7 @@
 	<dimen name="settings_btn_margin_img">16dp</dimen>
 	<dimen name="settings_btn_margin_lbl_outer">12dp</dimen>
 
+	<dimen name="feedback_tray_vertical_space_inner">16dp</dimen>
+	<dimen name="feedback_icon_size">24dp</dimen>
+
 </resources>

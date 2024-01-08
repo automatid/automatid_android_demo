@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/space_2xl"
+        android:layout_marginTop="@dimen/space_2xl"
+        android:layout_marginEnd="@dimen/space_2xl"
+        android:layout_weight="7"
+        android:adjustViewBounds="true"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/automatid_demo_app_feedback_success" />
+
+    <TextView
+        android:id="@+id/feedbackTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2xl"
+        android:layout_marginTop="@dimen/space_2xl"
+        android:layout_marginEnd="@dimen/space_2xl"
+        android:gravity="center_horizontal"
+        android:text="@string/feedback_title_success"
+        android:textColor="@color/text_color_on_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/feedbackText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2xl"
+        android:layout_marginTop="@dimen/space_xl"
+        android:layout_marginEnd="@dimen/space_2xl"
+        android:gravity="center_horizontal"
+        android:text="@string/feedback_body_success"
+        android:textColor="@color/text_color_on_dark"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2xl"
+        android:layout_marginTop="@dimen/space_n"
+        android:layout_marginEnd="@dimen/space_2xl"
+        android:layout_marginBottom="@dimen/space_n"
+        android:background="@drawable/feedback_tray">
+
+        <TextView
+            android:id="@+id/check1"
+            style="@style/FeedbackResultItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/card_authenticity"
+            app:drawableEndCompat="@drawable/ic_check"
+            app:layout_constraintBottom_toTopOf="@id/check2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/separator_feedback"
+            app:layout_constraintBottom_toTopOf="@id/check2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check1" />
+
+        <TextView
+            android:id="@+id/check2"
+            style="@style/FeedbackResultItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/card_verification"
+            app:drawableEndCompat="@drawable/ic_check"
+            app:layout_constraintBottom_toTopOf="@id/check3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check1" />
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/separator_feedback"
+            app:layout_constraintBottom_toTopOf="@id/check3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check2" />
+
+        <TextView
+            android:id="@+id/check3"
+            style="@style/FeedbackResultItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/card_not_expired"
+            app:drawableEndCompat="@drawable/ic_check"
+            app:layout_constraintBottom_toTopOf="@id/check4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check2" />
+
+        <View
+            android:id="@+id/separator3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/separator_feedback"
+            app:layout_constraintBottom_toTopOf="@id/check4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check3" />
+
+        <TextView
+            android:id="@+id/check4"
+            style="@style/FeedbackResultItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/card_data_match"
+            app:drawableEndCompat="@drawable/ic_check"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/check3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnClose"
+        style="@style/ButtonLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2xl"
+        android:layout_marginEnd="@dimen/space_2xl"
+        android:layout_marginBottom="@dimen/space_l"
+        android:text="@string/feedback_btn_close" />
+
+    <TextView
+        android:id="@+id/btnShareJwt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2xl"
+        android:layout_marginEnd="@dimen/space_2xl"
+        android:layout_marginBottom="@dimen/space_l"
+        android:background="?selectableItemBackground"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/feedback_share_jwt"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>

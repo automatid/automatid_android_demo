@@ -27,8 +27,24 @@
             app:popExitAnim="@anim/fade_out" />
 
         <action
-            android:id="@+id/home_to_feedback"
-            app:destination="@id/feedback"
+            android:id="@+id/home_to_feedback_id_doc"
+            app:destination="@id/feedbackIdDocument"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/home_to_feedback_cardscan"
+            app:destination="@id/feedbackCardScan"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/home_to_feedback_error"
+            app:destination="@id/feedbackError"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
@@ -69,12 +85,30 @@
     </fragment>
 
     <fragment
-        android:id="@+id/feedback"
-        android:name="com.opentech.automatid.demoapp.FeedbackFragment"
-        tools:layout="@layout/fragment_feedback">
+        android:id="@+id/feedbackIdDocument"
+        android:name="com.opentech.automatid.demoapp.IdDocumentFeedbackFragment"
+        tools:layout="@layout/fragment_feedback_id_doc">
         <argument
             android:name="result"
-            app:argType="com.opentech.automatid.AutomatIdIdentificationResult" />
+            app:argType="com.opentech.automatid.AutomatIdIdentificationResult$Success" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedbackCardScan"
+        android:name="com.opentech.automatid.demoapp.CardScanFeedbackFragment"
+        tools:layout="@layout/fragment_feedback_card">
+        <argument
+            android:name="result"
+            app:argType="com.opentech.automatid.AutomatIdIdentificationResult$Success" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedbackError"
+        android:name="com.opentech.automatid.demoapp.FeedbackErrorFragment"
+        tools:layout="@layout/fragment_feedback_error">
+        <argument
+            android:name="result"
+            app:argType="com.opentech.automatid.AutomatIdIdentificationResult$Error" />
     </fragment>
 
 </navigation>

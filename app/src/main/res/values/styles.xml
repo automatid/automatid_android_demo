@@ -23,4 +23,20 @@
         <item name="fontFamily">@font/montserrat_bold</item>
     </style>
 
+    <style name="FeedbackResultItem">
+        <item name="android:textColor">@color/text_color_on_dark</item>
+        <item name="android:layout_marginStart">@dimen/space_l</item>
+        <item name="android:layout_marginEnd">@dimen/space_l</item>
+        <item name="android:layout_marginTop">@dimen/feedback_tray_vertical_space_inner</item>
+        <item name="android:layout_marginBottom">@dimen/feedback_tray_vertical_space_inner</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="FeedbackResultItemValue">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/text_color_on_dark</item>
+        <item name="android:layout_marginEnd">@dimen/space_l</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

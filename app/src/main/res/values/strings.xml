@@ -39,14 +39,21 @@
 	<string name="card_scan_help_title">Reading a Payment Card</string>
 	<string name="card_scan_help_body">The card scan feature attests that the user has a specific credit/debit contactless card in his hands.\n \nYou will need to provide an encrypted JWT containing the card data (i.e. PAN, expiration date) of the card that you expect the user possesses. The card will be securely read and verified via NFC. No charges will be done on the card account.\n \nFor demo purposes, you can test both scenarios (user presents the correct card, user doesn\'t present the correct card) without providing the encrypted card data.</string>
 	<string name="card_scan_help_button_ok">Got it</string>
-	<string name="feedback_title_success">Identity verification successfully completed</string>
+	<string name="feedback_title_success">Identification successful</string>
 	<string name="feedback_title_error">Error</string>
-	<string name="feedback_body_success">Your identity has been successfully verified.\nWe generated a JWT token containing the result of this identification.</string>
-	<string name="feedback_share_jwt">Share JWT Token</string>
+	<string name="feedback_body_success">Your identity has been successfully verified. Please find below the results:</string>
+	<string name="feedback_share_jwt">Share JWT Token with the results</string>
 	<string name="feedback_btn_close">Done</string>
 	<string name="id_methods_identity_card_short">Identity Cards</string>
 	<string name="id_methods_passport_short">Passports</string>
 	<string name="error_management_retry_short">Retry on errors</string>
 	<string name="error_management_abort_short">Don\'t retry on errors</string>
-
+	<string name="issuing_authority_authenticity">Issuing authority authenticity</string>
+	<string name="document_data_integrity">Document data integrity</string>
+	<string name="liveness_check">Liveness check</string>
+	<string name="face_comparison_matching">Face comparison matching</string>
+	<string name="card_authenticity">Payment card authenticity</string>
+	<string name="card_verification">Payment card cryptographic verification</string>
+	<string name="card_not_expired">Payment card not expired</string>
+	<string name="card_data_match">Read card data matches provided data</string>
 </resources>
