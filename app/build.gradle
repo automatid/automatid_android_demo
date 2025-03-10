@@ -1,3 +1,4 @@
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: "androidx.navigation.safeargs.kotlin"
@@ -48,6 +49,9 @@ android {
 		sourceCompatibility JavaVersion.VERSION_1_8
 		targetCompatibility JavaVersion.VERSION_1_8
 	}
+	kotlinOptions {
+		jvmTarget = '1.8'
+	}
 
 	buildFeatures {
 		viewBinding true
@@ -80,4 +84,5 @@ dependencies {
 
 	implementation("com.automatid:automatid:${rootProject.ext.automatidVersion}") { changing = true }
 }
+
 

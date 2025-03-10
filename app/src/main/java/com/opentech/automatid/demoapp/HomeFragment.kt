@@ -86,6 +86,7 @@ class HomeFragment : Fragment() {
             .withDocumentTypes(documentTypes)
             .withCardScanInput(cardScanInput)
             .withShowFallbackButton(false)
+            .withSecureWindow(false)
             .build()
 
         AutomatIdManager.startIdentification(requireActivity(), identificationRequest, object : AutomatIdLifecycleCallback(this) {
